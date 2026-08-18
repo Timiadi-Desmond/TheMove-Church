@@ -455,7 +455,7 @@ header span{
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-     margin: 0 auto;
+    margin: 0 auto;
     
 
 }
@@ -464,6 +464,8 @@ header span{
     overflow: hidden;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    /* border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; */
 }
 
 .section3 .card1 .card-img img{
@@ -1046,7 +1048,7 @@ footer .social-logo .fa-brands:hover    {
 
 }
 
-@media (max-width: 390px) {
+@media (max-width: 500px) {
     .nav .fa-solid{
         display: block;
         font-size: 25px;
@@ -1105,6 +1107,11 @@ footer .social-logo .fa-brands:hover    {
         margin-top: -13px;
     }
 
+    
+    nav .main-logo img{
+        margin-left: -65px;
+    }
+
     .sign-in-btn{
         border: 1px red solid;
         padding: 13px 0;
@@ -1129,6 +1136,16 @@ footer .social-logo .fa-brands:hover    {
         gap: 2em;
     }
 
+    .section2 h1{
+        font-size: 2.3rem;
+        margin: 30px auto;
+    }
+
+    .section2 h2{
+      font-size: 1.7em;
+    }   
+
+
     .section-img-container{
         width: 95%;
     }
@@ -1147,7 +1164,7 @@ footer .social-logo .fa-brands:hover    {
         width: 95%;
         max-width: 800px;
         height: 480px;
-        border-radius: 3px;
+        border-radius: 8px;
     }
     .section3 .card1 .card-img img{
         width: 100%;
@@ -1161,8 +1178,8 @@ footer .social-logo .fa-brands:hover    {
     }
 
     .slider1{
-        width: 300px;
-        height: 200px;
+        width: 260px;
+        height: 160px;
     }
 
     .sermon-border{
@@ -1179,6 +1196,7 @@ footer .social-logo .fa-brands:hover    {
         margin: 0 auto;
         gap:2em;
         color: black;
+        
     }
 
     
@@ -1187,9 +1205,10 @@ footer .social-logo .fa-brands:hover    {
         background-color: rgb(234, 234, 234);
         border-radius: 12px;
         padding: 30px;
-        width: 95%;
+        max-width: 370px;
+        width: 100%;
         margin: 0 auto;
-        max-width: 800px;
+        /* max-width: 1000px; */
     }
 
     .section6-header h1{
@@ -1199,6 +1218,7 @@ footer .social-logo .fa-brands:hover    {
     .section6-header p{
       font-size: 1.12rem;    
       line-height: 1.5;
+
     }
 
     footer .footer-grid{
@@ -1213,4 +1233,35 @@ footer .social-logo .fa-brands:hover    {
         width: 100%;
         max-width: 500px;
     }
+
+    .section3-header h1, 
+    .section3-header p{
+        font-size: 1.2em;
+      
+    }
+
+    .section3-header h1{
+        font-size: 3em; 
+    }
+
+    
+
+    .section4{
+        font-size: 1.3em;
+        
+    }
+
+    .section4-header{
+        margin-bottom: 80px;
+        padding-top: 20px;
+    }
+
+    .section4-header p{
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+    .section6-btn{
+    flex-direction: column;
+}
 }
