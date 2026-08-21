@@ -26,7 +26,7 @@ nav{
     background: transparent;
     padding: 0 30px;
     margin-top: -40px;
-    max-height: 150px;
+    max-height: 130px;
     position: fixed;
     top: 0;
     left: 0;
@@ -57,6 +57,7 @@ nav .main-logo img{
     height: 15em;
     /* margin-top: -1.5rem; */
     filter:  brightness(0) invert(1);
+    transform: translateY(-10%);
 }
 
 
@@ -972,6 +973,21 @@ footer .social-logo .fa-brands:hover    {
     display: none;
 }
 
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 @media (max-width: 940px) {
     .grid-container{
@@ -1052,6 +1068,7 @@ footer .social-logo .fa-brands:hover    {
         display: block;
         font-size: 25px;
         color: #fff;
+        transform: translateY(-100%);
     }
 
     #navbar.scrolled .fa-solid{
@@ -1127,6 +1144,13 @@ footer .social-logo .fa-brands:hover    {
     font-size: 2.5rem;
     line-height: 1;
     }
+
+    .header-btn button{
+        font-size: 15px;
+        padding: 9px 10px;
+        border-radius: 10px;
+    }
+
 
     .section2-grid{
         grid-template-columns: 1fr;
@@ -1264,4 +1288,9 @@ footer .social-logo .fa-brands:hover    {
     .section6-btn{
     flex-direction: column;
 }
+
+    .section5-header{
+        font-size: 1.5em;
+        letter-spacing: 1;
+    }
 }

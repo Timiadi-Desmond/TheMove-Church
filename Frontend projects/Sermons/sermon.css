@@ -8,7 +8,10 @@
 
 
 
-html{
+html,body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -36,8 +39,8 @@ nav .main-logo img{
 }
 
 nav ul{
-      margin-top: -1.9rem;
-       margin-right: 35px;
+      /* margin-top: -1.9rem; */
+       /* margin-right: 35px; */
        /* background-color: red; */
 }
 
@@ -86,12 +89,13 @@ header{
     url('/Resources/Images/TheMove6.jpg');
     background-position: center;
     background-size: cover;
-    height: 170px;
+    height: 300px;
 }
 
 header .about-header{
     color: #fff;
     text-align: center;
+    /* margin: auto 0; */
 }
 
 header .about-header h1{
@@ -104,18 +108,22 @@ header .about-header p{
     font-family: "Inter", sans-serif;;
     font-size: 1.5em;
 }
-
 .container{
-    width: 100%;
     background-color: rgba(211, 211, 211, 0.169);
     height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 47px 0;
 }
 
-.container input{
-    width: 700px;
+.search-bar{
+    position: relative;
+    max-width: 700px;
+    margin: auto; 
+    width: 90%;
+    
+}
+
+.search-bar input{
+    width: 99%;
     padding: 15px 20px 15px 40px;
     border-radius: 8px;
     border: 1px solid gray;
@@ -127,11 +135,6 @@ header .about-header p{
 
 .search-bar input:focus{
     border: 2px solid red;
-}
-
-.search-bar{
-    position: relative;
-
 }
 
 .search-bar .fa-solid{
@@ -155,7 +158,8 @@ header .about-header p{
 }
 
 .sermon-border{
-    width: 1100px;
+    max-width: 1100px;
+    width: 90%;
     height: 200px;
     border: 1px solid rgb(202, 199, 199);
     display: grid;
@@ -184,7 +188,7 @@ header .about-header p{
 /* .SECTION4 */
 .section4{
     background-color:rgba(143, 2, 2, 0.879);
-    height: 400px;
+    height: auto;
     width: 100%;
     color: #fff;
     text-align: center;
@@ -254,7 +258,7 @@ header .about-header p{
 footer{
     background-color: rgb(74, 12, 12);
     font-family: "Inter", sans-serif;
-    height: 470px;
+    height: auto;
 }
 footer .footer-grid{
     display: grid;
@@ -266,14 +270,14 @@ footer .footer-grid{
 
 .grid-logo, .footer-link,
 .social-logo{
-    width: 250px;
+    max-width: 250px;
 }
 
 footer .grid-logo img{
     width: 10.2em;
     height: 10.2em;
     margin-top: -1.5rem;
-   margin-bottom: 40px;
+    margin-bottom: 40px;
     filter:  brightness(0) invert(1);
 }
 
@@ -328,7 +332,7 @@ footer .social-logo-p p {
     font-weight: 550;
     font-family: "Inter", sans-serif;
     margin-top: 20px;
-     transition: .2s ease;
+    transition: .2s ease;
 }
 
 footer .social-logo-p a p:hover{
@@ -353,7 +357,7 @@ footer .social-logo .fa-brands:hover    {
 }
 
 .section-divider{
-    width: 1000px;
+    max-width: 1000px;
     height: 1px;
     display: flex;
     justify-self: center;
@@ -372,4 +376,122 @@ footer .social-logo .fa-brands:hover    {
 }
 
 
+.nav .fa-solid{
+    display: none;
+}
 
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+@media (max-width: 760px) {
+
+    nav{
+        height: 75px;
+    }
+    .nav .fa-solid{
+        display: block;
+        font-size: 20px;
+        color: black;     
+        margin-right: 35px; 
+    }
+
+    .nav ul{
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        max-width: 420px;
+        height: 100vh;
+        min-height: 100vh;
+        padding-top: 120px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    .nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    .nav ul .fa-solid{
+        color: #000;
+    }
+    
+    .nav ul li a{
+        color: rgb(74, 74, 74);
+        font-size: 16px;
+         font-weight: 540;
+         font-family: "Inter", sans-serif;
+    }
+
+    .nav ul .fa-solid{
+        position: absolute;
+        top: 65px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+    .nav ul button{
+        padding: 13px 0;
+        width: 90%;
+        color:#fff ;
+        background-color: rgb(218, 4, 4); 
+        margin: 25px;
+        margin-top: -13px;
+    }
+
+    nav .main-logo img{
+       margin-left: -50px;
+    }
+
+     
+    header{
+        height: 400px;
+    }
+
+    header .about-header{
+        padding: 90px 30px;
+      
+    }
+
+    header .about-header h1{
+        font-size: 50px;
+        line-height: 1;
+    }
+    header .about-header p{
+        font-size: 19px;
+    }
+
+       
+    footer .footer-grid{
+    grid-template-columns: 1fr; 
+    padding: 20px 40px; 
+    padding-bottom: 80px;
+    gap: 5rem;
+    }
+
+    .grid-logo, .footer-link,
+    .social-logo{
+        width: 100%;
+        max-width: 500px;
+    }
+
+}

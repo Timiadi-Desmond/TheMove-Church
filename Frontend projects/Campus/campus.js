@@ -1,9 +1,29 @@
-window.addEventListener("scroll", () => {
-    const nav = document.getElementById("navbar");
+const sidemenu = document.getElementById('sidemenu')
+const overlay = document.querySelector(".overlay");
 
-    if(window.scrollY > 1){
-        nav.classList.add("scrolled");
-    }else{
-        nav.classList.remove("scrolled");
+window.addEventListener('scroll', () =>{
+    const navbar = document.getElementById('navbar')
+    if(window.scrollY > 50){
+        navbar.classList.add('scrolled')
     }
-});
+    else{
+        navbar.classList.remove('scrolled')
+    }
+})
+
+function closemenu(){
+    sidemenu.style.right = '-400px'
+    overlay.classList.remove("active");
+
+}
+function openmenu(){
+    sidemenu.style.right = '0'
+    overlay.classList.add("active");
+}
+
+
+
+
+
+
+
