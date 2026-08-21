@@ -16,7 +16,6 @@ html,body{
     margin: 0;
 }
 
-
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -25,8 +24,8 @@ nav{
     width: 100%;
     background: transparent;
     padding: 0 30px;
-    margin-top: -40px;
-    max-height: 130px;
+    margin-top: -50px;
+    max-height: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -51,19 +50,15 @@ nav{
     color: #fff;
 }
 
-
 nav .main-logo img{
     width: 15em;
     height: 15em;
-    /* margin-top: -1.5rem; */
     filter:  brightness(0) invert(1);
-    transform: translateY(-10%);
 }
-
 
 nav ul li{
     display: inline-block;
-    margin-right: 25px;    
+    margin-right: 25px;     
 }
 
 nav ul li a{
@@ -92,18 +87,13 @@ nav ul button{
     cursor: pointer;
     color:  hsl(0, 71%, 92%)
 }
+
 .nav ul button:hover{
      cursor: pointer;
      background-color:  hsl(0, 71%, 92%);
 }
 
-
-
-
-
 /* Header */
-
-
 .header{
     position: relative;
     background:linear-gradient(rgba(0, 0, 0, 0.655), rgba(0, 0, 0, 0.596)); 
@@ -1068,9 +1058,10 @@ footer .social-logo .fa-brands:hover    {
         display: block;
         font-size: 25px;
         color: #fff;
-        transform: translateY(-100%);
+        /* transform: translateY(-30%); */
     }
 
+   
     #navbar.scrolled .fa-solid{
        color: black;
     }
@@ -1082,7 +1073,6 @@ footer .social-logo .fa-brands:hover    {
         right: -400px;
         width: 400px;
         max-width: 85vw;
-        /* height: 100vh;    */
         height: 100vh;
         min-height: 100vh;
         padding-top: 120px;
