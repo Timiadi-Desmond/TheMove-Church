@@ -738,6 +738,16 @@ footer .social-logo .fa-brands:hover    {
         margin-top: -13px;
     }
 
+    .sign-in-btn{
+        border: 1px red solid;
+        padding: 13px 0;
+        width: 90%;
+        margin: 25px;
+        margin-bottom: -10px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
     nav .main-logo img{
        margin-left: -50px;
     }
