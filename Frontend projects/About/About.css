@@ -84,7 +84,7 @@ nav ul button{
 /* Header */
 header{
     background:linear-gradient(rgba(0, 0, 0, 0.655), rgba(0, 0, 0, 0.596)),
-    url('/Resources/Images/TheMove6.jpg');
+    url('../../Resources/Images/TheMove6.jpg');
     background-position: center;
     background-size: cover;
     height: 230px;
