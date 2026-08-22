@@ -6,40 +6,12 @@
     box-sizing: border-box;
 }
 
-html{
+html,body{
     scroll-behavior: smooth;
-}
-
-/* .section5{
-  
-    font-family: "Inter", sans-serif;
-    color: white;
-    background: 
-    linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.596)),
-    url('/Resources/Images/TheMove6.jpg');
+    overflow-x: hidden;
     width: 100%;
-    height: 900px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
+    margin: 0;
 }
-
-.section5-header{
-    margin-bottom: 80px;
-    padding-top: 50px;
-    line-height: 1.5;
-    font-size: 1.8em;
-    letter-spacing: 1;
-    text-align: center;
-}
-
-.section5-header p{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color:  hsl(0, 26%, 73%) ;
-} */
 
 .grid{
     display: grid;
@@ -49,7 +21,7 @@ html{
 
 .grid1{
     background:linear-gradient(rgba(0, 0, 0, 0.655), rgba(0, 0, 0, 0.596)),
-    url('/Resources/Images/The_Move-4c.jpg');
+    url('../../Resources/Images/The_Move-4c.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,7 +30,17 @@ html{
     flex-direction: column;
     justify-content: center;
     color: #fff;
+    height: 100vh;
+}
 
+.grid1 img{
+    width: 100px;
+    height: 100px;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    top: 0;
+    left: 40px;
+    cursor: pointer;
 }
 
 .grid1 h1{
@@ -75,8 +57,7 @@ html{
 }
 
 .grid2{
-     background-color: #fff;
-    height: 100vh;
+    background-color: #fff;
 }
 
 .section5-contact-information h1{
@@ -87,8 +68,16 @@ html{
 }
 
 .section5-form{
-    padding: 80px;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: "Inter", sans-serif;
+    height: 100vh;
+    align-items: center;
+    width: 100%;
+    
 }
 
 .section5-form h1{
@@ -96,6 +85,7 @@ html{
     font-size: 2rem;
     font-weight: 550;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .section5-form p{
@@ -105,6 +95,11 @@ html{
 
 .form-header{
     margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+    max-width: 480px;  
+    padding: 0 20px;
+  
 }
 
  .form-password p ,
@@ -119,14 +114,23 @@ html{
  .form-email,
 .form-password {
     margin-bottom: 20px;
+    width: 90%;
+    max-width: 440px;
 }
 
 .form-password input ,
 .form-email input {
     padding: 15px 10px;
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     border-radius: 10px;
     border: 1px solid rgb(167, 164, 164);
+    transition: .2s ease;
+}
+
+.btn{
+     width: 90%;
+    max-width: 440px;
 }
 
 
@@ -134,7 +138,8 @@ html{
  .btn button{
     font-family: "Inter", sans-serif;
     padding: 12px 10px;
-    width: 440px;
+    max-width: 440px;
+    width: 100%;
     border-radius: 8px;
     background-color:rgb(213, 20, 20);
     color: #fff;
@@ -145,8 +150,14 @@ html{
 }
 
 .section5-form button:hover{
-     cursor: pointer;
+    cursor: pointer;
     background-color:rgb(241, 93, 93);
+}
+
+.form-email input:focus,
+.form-password input:focus{
+    border: 1px solid red;
+    outline: none;
 }
 
 .signup{
@@ -158,4 +169,61 @@ html{
 .signup p a{
     text-decoration: none;
     color: red;
+}
+
+.fa-solid {
+    display: none;
+}
+
+@media (max-width: 1020px){
+    .grid1{
+        background-image: url(../../Resources/Images/logo.png);
+        height:90px ;
+        width: 100px;
+        margin: 0 auto;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(50%);
+       
+    }
+    
+    .container {
+        /* margin-right: auto; */
+        width: 100%;
+        max-width: 450px;  
+    }
+
+     .fa-solid{
+        display: block;
+        padding: 20px;
+     
+     }
+
+     .fa-solid a{
+        text-decoration: none;
+        color: gray;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        padding-left: 10px;
+        text-align: left;
+     }
+
+    .grid1 h1, .grid1 p{
+        display: none;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        /* padding: 0 px; */
+    }
+
+    .section5-form{
+        height: auto;
+    }
+
+
+
 }

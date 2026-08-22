@@ -1053,7 +1053,7 @@ footer .social-logo .fa-brands:hover    {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 820px) {
     .nav .fa-solid{
         display: block;
         font-size: 25px;
